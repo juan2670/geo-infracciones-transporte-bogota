@@ -7,4 +7,3 @@ Este proyecto automatiza el procesamiento de registros de infracciones viales, v
 - Procesamiento incremental: sólo se procesan y georreferencian las nuevas direcciones agregadas.
 - Visualización opcional de rutas, puntos y paraderos para auditoría y control de calidad.
 
-Ideal para empresas de transporte, áreas de operación, y equipos de análisis de movilidad urbana.
