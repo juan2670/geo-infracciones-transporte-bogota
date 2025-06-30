@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 ARCHIVO_INFRACCIONES = "Infracciones.csv"  # Archivo de entradas con direcciones
 ARCHIVO_SALIDA = "Infracciones_geocodificadas.xlsx"  # Salida final consolidada
 BASE_RUTAS = r"C:\Users\user\OneDrive\Escritorio\Medidas\Rutas"  # Carpeta principal con subcarpetas de rutas
-API_KEY = "-QtCxil3_pcLP5h2UrySWhX_qPGzhhtSeTtJpNcv7nc"  # API Key para Here Maps
+API_KEY = "API Key"  # API Key para Here Maps
 BATCH_SIZE = 10  # Número de direcciones nuevas a procesar en cada ejecución
 
 # -------------------------------------------------------
