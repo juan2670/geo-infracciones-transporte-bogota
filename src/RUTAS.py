@@ -10,9 +10,9 @@ import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 
 # -------------------- CONFIGURACIÓN --------------------
-ARCHIVO_INFRACCIONES = "Infracciones.csv"  # Archivo de entradas con direcciones
+ARCHIVO_INFRACCIONES = "Archivo de entradas con direcciones de las infracciones"  # Archivo de entradas con direcciones
 ARCHIVO_SALIDA = "Infracciones_geocodificadas.xlsx"  # Salida final consolidada
-BASE_RUTAS = r"C:\Users\user\OneDrive\Escritorio\Medidas\Rutas"  # Carpeta principal con subcarpetas de rutas
+BASE_RUTAS = r"Carpeta principal de las rutas"  # Carpeta principal con subcarpetas de rutas
 API_KEY = "API Key"  # API Key para Here Maps
 BATCH_SIZE = 10  # Número de direcciones nuevas a procesar en cada ejecución
 
