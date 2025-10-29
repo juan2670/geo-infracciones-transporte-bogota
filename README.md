@@ -1,9 +1,36 @@
-Este proyecto automatiza el procesamiento de registros de infracciones viales, vinculando cada evento a su ubicación geográfica precisa, la ruta de bus más cercana y el paradero relevante en sistemas de transporte público.
+# Geo-Infracciones — Transporte Bogotá
 
-**Características principales:**
-- Geocodificación automática de direcciones usando APIs de mapas (Here, Nominatim).
-- Asociación inteligente de cada infracción con la ruta y el paradero más cercanos (análisis espacial con árbol de decisión).
-- Exportación consolidada en un solo archivo Excel, compatible con análisis posteriores en Power BI o GIS.
-- Procesamiento incremental: sólo se procesan y georreferencian las nuevas direcciones agregadas.
-- Visualización opcional de rutas, puntos y paraderos para auditoría y control de calidad.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![GeoPandas](https://img.shields.io/badge/GeoPandas-ok-success)
+![Shapely](https://img.shields.io/badge/Shapely-ok-informational)
+![Folium](https://img.shields.io/badge/Folium-map-green)
 
+
+Proyecto para **analizar y visualizar geográficamente** infracciones del sistema de transporte en Bogotá usando **GeoPandas**, **Shapely**, **Folium** y **SQLite**.
+
+---
+
+## 👀 ¿Qué hace?
+
+- **Asocia** cada evento (lat, lon) a la **ruta** o **tramo** más cercano.  
+- **Detecta** si la infracción ocurrió **dentro/fuera** del trazado.  
+- **Genera mapas** interactivos (HTML) con capas por **tipo de evento**, **ruta** y **fecha**.  
+- **Exporta** resultados a **CSV/GeoJSON** para análisis posterior.
+
+---
+
+## 🗺️ Datos
+
+- Puntos de infracción: `data/eventos.csv` *(id, fecha, lat, lon, tipo)*  
+- Rutas: `rutas/*.geojson` o `rutas/*.kml`  
+- (Opcional) BD: `data/infractions.db`
+
+> Ajusta las rutas en `config.yml` o variables del script principal.
+
+---
+
+## ⚙️ Requisitos
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install geopandas shapely folium pandas matplotlib
