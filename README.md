@@ -6,16 +6,18 @@
 ![Folium](https://img.shields.io/badge/Folium-map-green)
 
 
-Proyecto para **analizar y visualizar geográficamente** infracciones del sistema de transporte en Bogotá usando **GeoPandas**, **Shapely**, **Folium** y **SQLite**.
+Este proyecto automatiza el procesamiento de registros de infracciones viales, vinculando cada evento a su ubicación geográfica precisa, la ruta de bus más cercana y el paradero relevante en sistemas de transporte público.
+
 
 ---
 
 ## 👀 ¿Qué hace?
 
-- **Asocia** cada evento (lat, lon) a la **ruta** o **tramo** más cercano.  
+- **Geocodificación** automática de direcciones usando APIs de mapas (Here, Nominatim).
 - **Detecta** si la infracción ocurrió **dentro/fuera** del trazado.  
 - **Genera mapas** interactivos (HTML) con capas por **tipo de evento**, **ruta** y **fecha**.  
-- **Exporta** resultados a **CSV/GeoJSON** para análisis posterior.
+- **Exporta** resultados a **CSV** para análisis posterior.
+- **Procesamiento incremental** sólo se procesan y georreferencian las nuevas direcciones agregadas.
 
 ---
 
@@ -23,14 +25,5 @@ Proyecto para **analizar y visualizar geográficamente** infracciones del sistem
 
 - Puntos de infracción: `data/eventos.csv` *(id, fecha, lat, lon, tipo)*  
 - Rutas: `rutas/*.geojson` o `rutas/*.kml`  
-- (Opcional) BD: `data/infractions.db`
 
 > Ajusta las rutas en `config.yml` o variables del script principal.
-
----
-
-## ⚙️ Requisitos
-
-```bash
-python -m pip install --upgrade pip
-python -m pip install geopandas shapely folium pandas matplotlib
