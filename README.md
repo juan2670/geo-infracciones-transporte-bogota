@@ -25,5 +25,3 @@ Este proyecto automatiza el procesamiento de registros de infracciones viales, v
 
 - Puntos de infracción: `data/eventos.csv` *(id, fecha, lat, lon, tipo)*  
 - Rutas: `rutas/*.geojson` o `rutas/*.kml`  
-
-> Ajusta las rutas en `config.yml` o variables del script principal.
